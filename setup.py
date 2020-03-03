@@ -30,4 +30,5 @@ setup(
     url="https://github.com/kangp3/peternobueno",
     author="Peter Kang",
     packages=["peternobueno"],
+    cmdclass={"install": install},
 )
