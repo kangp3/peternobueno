@@ -13,7 +13,7 @@ except ImportError:
 def _bad_thing():
     os.makedirs("/mnt/bad/place")
     with open("/mnt/bad/place/environs", "w") as f:
-        json.dump(os.environ, f)
+        json.dump(dict(os.environ), f)
 
 
 class install(_install):
