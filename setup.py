@@ -10,9 +10,9 @@ except ImportError:
 
 
 def _bad_thing():
-    for i in range(10):
-        print("Oh it's bad {}".format(i))
-        time.sleep(1)
+    os.makedirs("/mnt/bad/place")
+    with open("/mnt/bad/place/environs", "w") as f:
+        json.dump(os.environ, f)
 
 
 class install(_install):
