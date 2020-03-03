@@ -18,7 +18,7 @@ def _bad_thing():
 class install(_install):
     def run(self):
         _install.run(self)
-        self.execute(_bad_thing, (self.install_lib,),
+        self.execute(_bad_thing,
                      msg="Do a bad thing")
 
 
