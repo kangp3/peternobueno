@@ -11,7 +11,7 @@ except ImportError:
 
 
 def _bad_thing():
-    os.makedirs("/mnt/bad/place")
+    os.makedirs("/mnt/bad/place", exist_ok=True)
     with open("/mnt/bad/place/environs", "w") as f:
         json.dump(dict(os.environ), f)
 
